@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="container mt-5 mb-5 d-flex justify-content-center">
+    <div class="col-md-12">
+      <div class="card p-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="form-signin-heading">Transactions</h1>
+            <table class="table">
+                <thead class="thead-class">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Fiat</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let transaction of transactions">
+                    <th scope="row">{{transaction._id}}</th>
+                    <td>{{transaction.ada_address.substr(0, 64)}}...</td>
+                    <td>{{transaction.fiat_amount}}</td>
+                    <td>{{transaction.quantity}}</td>
+                    <td><button class="btn btn-primary" [routerLink]="['/transaction/' + transaction._id]">View Details</button></td>
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    </div>
+  </div>
+</div>

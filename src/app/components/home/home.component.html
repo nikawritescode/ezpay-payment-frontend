@@ -1,0 +1,41 @@
+<div class="container mt-5 mb-5 d-flex justify-content-center">
+  <div class="col-md-6">
+    <div class="card p-5">
+      <div class="row">
+        <div>
+          <h4 class="heading">Buy cardano</h4>
+          <p class="text">Enter cardano amount to purchase using stripe:</p>
+
+        </div>
+        <div class="pricing p-3 rounded mt-4 d-flex justify-content-between">
+          <div class="images d-flex flex-row align-items-center"><img src="assets/images/stripe.svg" class="rounded"
+                                                                      width="60">
+            <div class="d-flex flex-column ml-4"><span class="business">Amount to charge:</span> <span class="plan">Stripe Payments</span>
+            </div>
+          </div>
+
+          <!--pricing table-->
+          <div class="d-flex flex-row align-items-center"><sup class="dollar font-weight-bold">$</sup> <span
+            class="amount ml-1 mr-1">
+          {{ orderDetails.fiatAmount }}</span> <span class="year font-weight-bold"></span></div> <!-- /pricing table-->
+        </div>
+        <div class="mt-4">
+          <alert></alert>
+        </div>
+
+        <span class="detail mt-5">Payment details</span>
+        <h6 class="mt-4 text-primary">ADA amount:</h6>
+        <div class="email mt-2"><input type="text" class="form-control email-text"
+                                       [(ngModel)]="orderDetails.cardanoAmount" (ngModelChange)='onChange($event)'
+                                       placeholder="Cardano amount"></div>
+        <h6 class="mt-4 text-primary">Enter Address</h6>
+        <div class="email mt-2"><input type="text" class="form-control email-text"
+                                       [(ngModel)]="orderDetails.cardanoAddress" placeholder="Cardano address"></div>
+        <div class="mt-3">
+          <button class="btn btn-primary btn-block payment-button" (click)="submitOrder()">Proceed to payment <i
+            class="fa fa-long-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

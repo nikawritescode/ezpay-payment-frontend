@@ -1,0 +1,67 @@
+<section class="p-0 d-flex align-items-center position-relative overflow-hidden vh-95">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-6 d-md-flex align-items-center justify-content-center left-login-bg bg-opacity-10 vh-100">
+        <div class="p-3 p-lg-5">
+          <div class="text-center">
+            <h2 class="fw-bold">Welcome back!</h2>
+          </div>
+          <img src="assets/images/login.svg" class="mt-5 login-image" alt="">
+
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 m-auto">
+        <div class="row my-5">
+          <div class="col-sm-10 col-xl-8 m-auto">
+            <h1 class="fs-2">Login into Cardano!</h1>
+            <p class="lead mb-4">Enter your account credentials.</p>
+
+            <form (submit)="login()">
+              <div class="mb-4">
+                <label for="emailInput" class="form-label">Email address *</label>
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><fa-icon [icon]="faUser"></fa-icon></span>
+                  <input type="email" [(ngModel)]="credentials.email" id="emailInput" class="form-control border-0 bg-light rounded-end ps-1" placeholder="E-mail" name="email" >
+                </div>
+              </div>
+              <div class="mb-4">
+                <label for="passwordInput" class="form-label">Password *</label>
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text bg-light rounded-start border-0 text-secondary px-3"><fa-icon [icon]="faKey"></fa-icon></span>
+                  <input [(ngModel)]="credentials.password" type="password" id="passwordInput" class="form-control border-0 bg-light rounded-end ps-1" placeholder="password" name="password" >
+                </div>
+                <div id="passwordHelpBlock" class="form-text">
+                  Your password must be 6 characters at least
+                </div>
+              </div>
+
+              <!-- Button -->
+              <div class="align-items-center mt-0">
+                <div class="d-grid">
+                  <button class="btn btn-primary mb-0" type="submit"><fa-icon [icon]="faKey"></fa-icon> Log in</button>
+                </div>
+              </div>
+            </form>
+            <!-- Form END -->
+
+            <!-- Social buttons and divider -->
+            <div class="row">
+              <!-- Divider with text -->
+              <div class="position-relative my-4">
+                <hr>
+                <p class="small position-absolute top-50 start-50 translate-middle bg-body px-5">Or</p>
+              </div>
+
+            </div>
+
+            <!-- Sign up link -->
+            <div class="mt-4 text-center">
+              <span>Don't have an account? <a routerLink="/register" class="btn-green">Signup here</a></span>
+            </div>
+          </div>
+        </div> <!-- Row END -->
+      </div>
+    </div> <!-- Row END -->
+  </div>
+</section>
