@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body{
   background-color: #e9ecf1;
 }
 h1, h2, h3, h4, label, .btn, a{
-    font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .navbar{
     background-color: white;
@@ -11,10 +13,15 @@ h1, h2, h3, h4, label, .btn, a{
     width:150px;
 }
 .navbar-nav .nav-link{
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
     font-size: 16px;
     color: #000;
+}
+.register-button{
+}
+.thead-class{
+
 }
 a {
   color: #FFF;
@@ -77,9 +84,26 @@ a {
   font-weight: 500
 }
 
+.year {
+  font-size: 20px;
+  color: #6b6b6f;
+  margin-top: 19px
+}
+
 .detail {
   font-size: 22px;
   font-weight: 500
+}
+
+.cvv {
+  height: 44px;
+  width: 73px;
+  border: 2px solid #eee
+}
+
+.cvv:focus {
+  box-shadow: none;
+  border: 2px solid #304FFE
 }
 
 .email-text {
@@ -93,8 +117,41 @@ a {
 }
 
 .payment-button {
-  height: 70px;
-  font-size: 20px
+  height: 55px;
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding-top: 2px !important;
+  color: #3a3e42;
+  border: 1px solid #eee;
+  background: #f2f5ff63;
+  font-weight: 700;
+  line-height: 40px;
+}
+.payment-button:hover{
+  background: #f2f5ff;
+  color: #080808;
+  border: 1px solid #eeeeee;
+
+}
+
+.login-button {
+  height: 55px;
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding-top: 2px !important;
+  color: #FFF;
+  border: 1px solid #198754;
+  background-color: #198754;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.login-button:hover{
+  background-color: #198754;
+  color: #FFF;
+  border: 1px solid #198754;
+
 }
 .btn-green{
   color:#8cb369;

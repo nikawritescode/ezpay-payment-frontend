@@ -9,6 +9,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { TransactionsComponent } from './components/transactions/transactions.component';
+import { UsersComponent } from './components/users/users.component';
 import { TransactionComponent } from './components/transaction/transaction.component';
 import {AlertModule} from "./shared/alert/alert.module";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -20,6 +21,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     HomeComponent,
     TransactionsComponent,
+    UsersComponent,
     TransactionComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, AlertModule, NgbModule, FontAwesomeModule],

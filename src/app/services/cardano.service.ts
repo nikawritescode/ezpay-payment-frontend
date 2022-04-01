@@ -11,6 +11,7 @@ export interface CardanoPayLoad {
   cardanoAddress: string;
   cardanoAmount: string;
   fiatAmount: string;
+  payPalTransactionId: string;
 }
 export interface TransactionObject {
   _id: string;
@@ -33,6 +34,9 @@ export class CardanoService {
   }
   public createOrder(order: CardanoPayLoad): Observable<any> {
     return this.http.post(`${environment.baseUrl}/api/transactions/create`, order, { headers: { Authorization: `Bearer ${this.auth.getToken()}` } });
+  }
+  public createPayPalOrder(order: CardanoPayLoad): Observable<any> {
+    return this.http.post(`${environment.baseUrl}/api/transactions/paypal-order`, order, { headers: { Authorization: `Bearer ${this.auth.getToken()}` } });
   }
   public getTransactions(): Observable<any>{
     return this.http.get(`${environment.baseUrl}/api/transactions/`,{ headers: { Authorization: `Bearer ${this.auth.getToken()}` } })

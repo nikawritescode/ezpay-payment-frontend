@@ -7,35 +7,35 @@
             <h4 class="heading">Transaction Details</h4>
             <div class="mb-3">
               <label for="transaction-id" class="col-form-label">ID:</label>
-              <input type="text" class="form-control" id="transaction-id" [ngModel]="transactionDetails._id" readonly>
+              <input type="text" class="form-control" id="transaction-id" [ngModel]="transactionDetails?._id" readonly>
             </div>
-            <div class="mb-3" *ngIf="transactionDetails.payment_id">
+            <div class="mb-3" *ngIf="transactionDetails?.payment_id">
               <label for="external-payment-id" class="col-form-label">External Transaction ID:</label>
-              <input type="text" class="form-control" id="external-payment-id" [ngModel]="transactionDetails.payment_id"
+              <input type="text" class="form-control" id="external-payment-id" [ngModel]="transactionDetails?.payment_id"
                      readonly>
             </div>
-            <div class="mb-3" *ngIf="transactionDetails.cardanoTransactionId">
+            <div class="mb-3" *ngIf="transactionDetails?.cardanoTransactionId">
               <label for="ada-transaction-id" class="col-form-label">ADA Transaction ID:</label>
               <input type="text" class="form-control" id="ada-transaction-id"
-                     [ngModel]="transactionDetails.cardanoTransactionId" readonly>
+                     [ngModel]="transactionDetails?.cardanoTransactionId" readonly>
             </div>
             <div class="mb-3">
               <label for="ada-amount" class="col-form-label">ADA amount:</label>
-              <input type="text" class="form-control" id="ada-amount" [ngModel]="transactionDetails.quantity" readonly>
+              <input type="text" class="form-control" id="ada-amount" [ngModel]="transactionDetails?.quantity" readonly>
             </div>
             <div class="mb-3">
               <label for="fiat-amount" class="col-form-label">FIAT Amount:</label>
-              <input type="text" class="form-control" id="fiat-amount" [ngModel]="transactionDetails.fiat_amount"
+              <input type="text" class="form-control" id="fiat-amount" [ngModel]="transactionDetails?.fiat_amount"
                      readonly>
             </div>
             <div class="mb-3">
               <label for="transaction-status" class="col-form-label">Transaction status:</label>
               <input type="text" class="form-control" id="transaction-status"
-                     [ngModel]="transactionDetails.transactionStatus" readonly>
+                     [ngModel]="transactionDetails?.transactionStatus" readonly>
             </div>
             <div class="mb-3">
               <label for="transaction-date" class="col-form-label">Transaction date:</label>
-              <input type="text" class="form-control" id="transaction-date" [ngModel]="transactionDetails.createdAt"
+              <input type="text" class="form-control" id="transaction-date" [ngModel]="transactionDetails?.createdAt"
                      readonly>
             </div>
           </div>
@@ -44,7 +44,7 @@
             <div class="mt-4"><a class="btn btn-outline-primary" routerLink="/transactions">< Back to transactions</a>
             </div>
           </div>
-          <div class="col-2 offset-7" *ngIf="transactionDetails.cardanoTransactionId">
+          <div class="col-2 offset-7" *ngIf="transactionDetails?.cardanoTransactionId">
 
             <div class="mt-4"><a class="btn btn-warning" (click)="openExplorer()"> Open in Explorer ></a></div>
           </div>
